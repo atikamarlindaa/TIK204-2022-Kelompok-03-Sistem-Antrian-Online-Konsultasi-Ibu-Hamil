@@ -23,7 +23,7 @@ include("pages/samples/man.php");
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/pngwing.com (1).png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -137,9 +137,9 @@ include("pages/samples/man.php");
                 <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
                 <div class="info">
                   <div class="wrapper d-flex">
-                    <p>Catherine</p>
+                    <p>Dr. Maggie</p>
                   </div>
-                  <p>Away</p>
+                  <p>hello</p>
                 </div>
                 <div class="badge badge-success badge-pill my-auto mx-2">4</div>
                 <small class="text-muted my-auto">23 min</small>
@@ -147,7 +147,7 @@ include("pages/samples/man.php");
               <li class="list">
                 <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
-                  <p>Madeline Kennedy</p>
+                  <p>Dr. Madeline Kennedy</p>
                   <p>Available</p>
                 </div>
                 <small class="text-muted my-auto">5 min</small>
@@ -155,7 +155,7 @@ include("pages/samples/man.php");
               <li class="list">
                 <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
-                  <p>Sarah Graves</p>
+                  <p>Dr. Sarah Graves</p>
                   <p>Available</p>
                 </div>
                 <small class="text-muted my-auto">47 min</small>
@@ -163,22 +163,13 @@ include("pages/samples/man.php");
             </ul>
             <!--CODINGAN UNTUK EVENTS -->
             <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
-            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Jadwal Konsultasi Hari Ini</h4>
             <div class="events pt-4 px-3">
               <div class="wrapper d-flex mb-2">
                 <i class="ti-control-record text-primary mr-2"></i>
-                <span>Feb 7 2019</span>
+                <span>Apr 26 2022</span>
               </div>
-              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
-              <p class="text-gray mb-0">The total number of sessions</p>
-            </div>
-            <div class="events pt-4 px-3">
-              <div class="wrapper d-flex mb-2">
-                <i class="ti-control-record text-primary mr-2"></i>
-                <span>Feb 7 2018</span>
-              </div>
-              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
-              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+              <p class="mb-0 font-weight-thin text-gray">Konsultasi 1 : 09:00</p>
             </div>
             <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
           </div>
@@ -205,7 +196,7 @@ include("pages/samples/man.php");
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/form_antrian.php">Form Antrian</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/forms/form_antrian.php">Ambil Antrian</a></li>
               </ul>
             </div>
           </li>
