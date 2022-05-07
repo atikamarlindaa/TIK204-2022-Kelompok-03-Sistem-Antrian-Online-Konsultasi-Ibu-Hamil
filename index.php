@@ -75,16 +75,14 @@ include("pages/samples/man.php");
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
               <img src="images/faces/100.jpg" alt="profile"/>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Settings
-              </a>
-              <a class="dropdown-item"  href="pages/samples/logout.php">
-                <i class="ti-power-off text-primary"></i>
-                Logout
-              </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div class="dropdown-header text-center">
+                <img class="img-md rounded-circle" src="images/faces/100.jpg" alt="Profile image">
+                <p class="mb-1 mt-3 font-weight-semibold">Ibu Hamil</p>
+                <p class="fw-light text-muted mb-0">ibuhamil@gmail.com</p>
+              </div>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> Profil Saya <span class="badge badge-pill badge-danger"></span></a>
+              <a class="dropdown-item" href="pages/samples/logout.php"><i class="dropdown-item-icon mdi mdi-power text-primary me-2 " ></i>Sign Out</a>
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-flex">
@@ -161,7 +159,7 @@ include("pages/samples/man.php");
                 <small class="text-muted my-auto">47 min</small>
               </li>
             </ul>
-            <!--CODINGAN UNTUK EVENTS -->
+            <!--CODINGAN UNTUK JADWAL -->
             <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
             <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Jadwal Konsultasi Hari Ini</h4>
             <div class="events pt-4 px-3">
@@ -212,6 +210,7 @@ include("pages/samples/man.php");
               </ul>
             </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="icon-head menu-icon"></i>
@@ -223,9 +222,23 @@ include("pages/samples/man.php");
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/login.php"> Login</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/register.php"> Register </a></li>
               </ul>
+            </div>          
+          </li>
+
+  
+          <li class="nav-item"> 
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Jadwal Antrian </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/forms/jadwal/jadwal.php">Jadwal Antrian</a></li>
+              </ul>
             </div>
           </li>
-        </ul>
+
       </nav>
       <!-- partial -->
       <div class="main-panel">
@@ -297,7 +310,7 @@ include("pages/samples/man.php");
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @USK | SISTEM ANTRIAN KONSULTASI IBU HAMIL <?php
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @KELOMPOK 3 | SISTEM ANTRIAN KONSULTASI IBU HAMIL <?php
  $tgl=date('d-m-Y');
  echo $tgl;
  ?></span>
