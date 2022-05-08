@@ -75,6 +75,7 @@ include("pages/samples/man.php");
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
               <img src="images/faces/100.jpg" alt="profile"/>
+<<<<<<< HEAD
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <div class="dropdown-header text-center">
                 <img class="img-md rounded-circle" src="images/faces/100.jpg" alt="Profile image">
@@ -83,6 +84,18 @@ include("pages/samples/man.php");
               </div>
               <a class="dropdown-item" href="pages/samples/profil.php"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> Profil Saya</a>
               <a class="dropdown-item" href="pages/samples/logout.php"><i class="dropdown-item-icon mdi mdi-power text-primary me-2 " ></i>Sign Out</a>
+=======
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item"  href="pages/samples/logout.php">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+>>>>>>> dashboard
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-flex">
@@ -210,7 +223,6 @@ include("pages/samples/man.php");
               </ul>
             </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="icon-head menu-icon"></i>
@@ -222,23 +234,9 @@ include("pages/samples/man.php");
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/login.php"> Login</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/register.php"> Register </a></li>
               </ul>
-            </div>          
-          </li>
-
-  
-          <li class="nav-item"> 
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="icon-grid-2 menu-icon"></i>
-              <span class="menu-title">Jadwal Antrian </span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/forms/jadwal/jadwal.php">Jadwal Antrian</a></li>
-              </ul>
             </div>
           </li>
-
+        </ul>
       </nav>
       <!-- partial -->
       <div class="main-panel">
@@ -310,7 +308,11 @@ include("pages/samples/man.php");
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
+<<<<<<< HEAD
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @KELOMPOK 3 | SISTEM ANTRIAN KONSULTASI IBU HAMIL <?php
+=======
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @Kelompok 03 | SISTEM ANTRIAN OnlKONSULTASI IBU HAMIL <?php
+>>>>>>> dashboard
  $tgl=date('d-m-Y');
  echo $tgl;
  ?></span>
