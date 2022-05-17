@@ -9,7 +9,7 @@ include("pages/samples/man.php");
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Sistem Antrian Online Konsultasi Ibu Hamil</title>
+  <title>Konsultasi Ibu Hamil Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -23,7 +23,7 @@ include("pages/samples/man.php");
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/pngwing.com (1).png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -75,16 +75,6 @@ include("pages/samples/man.php");
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
               <img src="images/faces/100.jpg" alt="profile"/>
-<<<<<<< HEAD
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <div class="dropdown-header text-center">
-                <img class="img-md rounded-circle" src="images/faces/100.jpg" alt="Profile image">
-                <p class="mb-1 mt-3 font-weight-semibold">Ibu Hamil</p>
-                <p class="fw-light text-muted mb-0">ibuhamil@gmail.com</p>
-              </div>
-              <a class="dropdown-item" href="pages/samples/profil.php"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> Profil Saya</a>
-              <a class="dropdown-item" href="pages/samples/logout.php"><i class="dropdown-item-icon mdi mdi-power text-primary me-2 " ></i>Sign Out</a>
-=======
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
@@ -95,7 +85,6 @@ include("pages/samples/man.php");
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
->>>>>>> dashboard
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-flex">
@@ -148,9 +137,9 @@ include("pages/samples/man.php");
                 <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
                 <div class="info">
                   <div class="wrapper d-flex">
-                    <p>Dr. Maggie</p>
+                    <p>Catherine</p>
                   </div>
-                  <p>hello</p>
+                  <p>Away</p>
                 </div>
                 <div class="badge badge-success badge-pill my-auto mx-2">4</div>
                 <small class="text-muted my-auto">23 min</small>
@@ -158,7 +147,7 @@ include("pages/samples/man.php");
               <li class="list">
                 <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
-                  <p>Dr. Madeline Kennedy</p>
+                  <p>Madeline Kennedy</p>
                   <p>Available</p>
                 </div>
                 <small class="text-muted my-auto">5 min</small>
@@ -166,21 +155,30 @@ include("pages/samples/man.php");
               <li class="list">
                 <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
                 <div class="info">
-                  <p>Dr. Sarah Graves</p>
+                  <p>Sarah Graves</p>
                   <p>Available</p>
                 </div>
                 <small class="text-muted my-auto">47 min</small>
               </li>
             </ul>
-            <!--CODINGAN UNTUK JADWAL -->
+            <!--CODINGAN UNTUK EVENTS -->
             <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
-            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0"></h4>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
             <div class="events pt-4 px-3">
               <div class="wrapper d-flex mb-2">
                 <i class="ti-control-record text-primary mr-2"></i>
-                <span></span>
+                <span>Feb 7 2019</span>
               </div>
-              <p class="mb-0 font-weight-thin text-gray"></p>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
             </div>
             <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
           </div>
@@ -207,7 +205,7 @@ include("pages/samples/man.php");
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/form_antrian.php">Ambil Antrian</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/forms/form_antrian.php">Form Antrian</a></li>
               </ul>
             </div>
           </li>
@@ -308,11 +306,7 @@ include("pages/samples/man.php");
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-<<<<<<< HEAD
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @KELOMPOK 3 | SISTEM ANTRIAN KONSULTASI IBU HAMIL <?php
-=======
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @Kelompok 03 | SISTEM ANTRIAN OnlKONSULTASI IBU HAMIL <?php
->>>>>>> dashboard
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright @USK | SISTEM ANTRIAN KONSULTASI IBU HAMIL <?php
  $tgl=date('d-m-Y');
  echo $tgl;
  ?></span>
