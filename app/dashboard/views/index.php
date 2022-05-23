@@ -10,7 +10,7 @@ $count_pasien = mysqli_num_rows($pasien);
 
 // $_SESSION['title'] = 'Dashboard';
 ?>
-<!-- Dashboard Analytics Start -->
+<!-- bagian awal analisa -->
 <section id="dashboard-analytics">
   <div class="row">
     <div class="col-lg-3 col-md-6 col-12">
