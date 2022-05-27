@@ -7,9 +7,6 @@
   session_start();
   include 'auth/connect.php';
   include "part/head.php";
-  $sessionid = $_SESSION['id_pasien'];
-  $nama = mysqli_query($conn, "SELECT * FROM pasien WHERE id=$sessionid");
-  $output = mysqli_fetch_array($nama);
   ?>
 </head>
 
@@ -19,8 +16,8 @@
       <div class="navbar-bg"></div>
 
       <?php
-      include 'part/navbar_pasien.php';
-      include 'part/sidebar_pasien.php';
+      include 'part/navbar_admin.php';
+      include 'part/sidebar_admin.php';
       ?>
 
       <!-- Main Content -->
@@ -34,7 +31,7 @@
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Foto hasil USG</h4>
+                    <h4>Pasien yang memiliki foto hasil usg</h4>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -46,12 +43,12 @@
                             <th>Jumlah Foto Hasil USG</th>
                             <th>Nama Penyakit</th>
                             <th>Biaya</th>
-                            <th>Action</th>
+                            <th class="text-center">Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <?php
-                          $sql = mysqli_query($conn, "SELECT *, COUNT(*) FROM foto_usg WHERE id_pasien='$sessionid' GROUP BY id_pasien, id_penyakit");
+                          $sql = mysqli_query($conn, "SELECT *, COUNT(*) FROM foto_usg GROUP BY id_pasien, id_penyakit");
                           $i = 0;
                           while ($row = mysqli_fetch_array($sql)) {
                             $idpasien = $row['id_pasien'];
@@ -71,10 +68,10 @@
                               <td>Rp. <?php echo number_format($row['biaya'], 0, ".", "."); ?></td>
                               <td align="center">
                                 <div class="btn-group">
-                                  <form method="POST" action="detail_usg_pasien.php">
+                                  <form method="POST" action="detail_usg_admin.php">
                                     <input type="hidden" name="id" value="<?php echo $pasien['nama_pasien']; ?>">
                                     <input type="hidden" name="idriwayat" value="<?php echo $idriwayat ?>">
-                                    <button type="submit" class="btn btn-info" name="detail" title="Menampilkan semua foto hasil usg" data-toggle="tooltip">Info Detail</button>
+                                    <button type="submit" class="btn btn-info" name="detail" title="Menampilkan semua foto usg" data-toggle="tooltip">Info Detail</button>
                                   </form>
                                   &emsp;
                                   <form method="POST" action="print.php" target="_blank">
