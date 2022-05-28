@@ -40,6 +40,7 @@
               display: true,
               padding: 10,
               fontColor:"#6C7383"
+              
             },
             gridLines: {
               display: false,
