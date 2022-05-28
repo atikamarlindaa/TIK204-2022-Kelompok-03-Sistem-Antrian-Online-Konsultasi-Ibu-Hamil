@@ -65,6 +65,7 @@
               display: true,
               color:"#f2f2f2",
               drawBorder: false
+              
             }
           }]
         },
