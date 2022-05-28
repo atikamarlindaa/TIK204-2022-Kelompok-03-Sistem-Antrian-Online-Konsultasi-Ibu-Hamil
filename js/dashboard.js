@@ -110,6 +110,7 @@
             borderWidth: 2,
             fill: false,
             label: "Downloads"
+            
           }
         ]
       };
