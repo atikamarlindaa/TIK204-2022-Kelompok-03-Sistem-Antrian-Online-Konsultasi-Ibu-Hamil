@@ -70,14 +70,6 @@ if (isset($_POST['printall'])) {
                     <td> : <?php echo tgl_indo($pasien['tgl_lahir']); ?></td>
                   </tr>
                   <tr>
-                    <th scope="row">Tinggi Badan</th>
-                    <td> : <?php echo $pasien['tinggi_badan'] . " cm"; ?></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Berat Badan</th>
-                    <td> : <?php echo $pasien['berat_badan'] . " kg"; ?></td>
-                  </tr>
-                  <tr>
                     <th scope="row">Alamat</th>
                     <td> : <?php echo $pasien['alamat']; ?></td>
                   </tr>
@@ -100,9 +92,9 @@ if (isset($_POST['printall'])) {
                 <thead>
                   <tr>
                     <th>Tanggal Berobat</th>
-                    <th>Penyakit</th>
-                    <th>Diagnosa</th>
-                    <th>Obat</th>
+                    <th>Keluhan</th>
+                    <th>Saran</th>
+                    <th>Obat/Vitamin</th>
                     <th>Total Biaya</th>
                   </tr>
                 </thead>
@@ -116,26 +108,7 @@ if (isset($_POST['printall'])) {
                       <td><?php echo ucwords(tgl_indo($row['tgl'])); ?></td>
                       <td><?php echo ucwords($row['penyakit']); ?></td>
                       <td><?php
-                          echo $row['diagnosa']. " - ";
-                          $status = substr($row['id_rawatinap'], 0, 3);
-                          $idrawatinap = substr($row['id_rawatinap'], 3);
-                          if ($row['id_rawatinap'] == '0') {
-                            echo 'Pasien tidak membutuhkan Rawat Inap';
-                          } else {
-                            if ($status == "tmp") {
-                              $ruang = mysqli_query($conn, "SELECT * FROM ruang_inap WHERE id='$idrawatinap'");
-                              $showruang = mysqli_fetch_array($ruang);
-                              echo "Pasien masih dirawat di ruang " . $showruang['nama_ruang'] . " sejak tgl " . tgl_indo($showruang['tgl_masuk']);
-                              $biayapenginapan = $showruang['biaya'];
-                            }
-                            if ($status == "yes") {
-                              $riw1 = mysqli_query($conn, "SELECT * FROM riwayat_rawatinap WHERE id='$idrawatinap'");
-                              $riwayatinap = mysqli_fetch_array($riw1);
-                              echo 'Pasien pernah dirawat pada tgl ' . tgl_indo($riwayatinap['2']) . ' - ' . tgl_indo($riwayatinap['3']);
-
-                              $biayarawatinap = $riwayatinap['biaya'];
-                            }
-                          }
+                          echo $row['diagnosa'];
                           ?>
                       </td>
                       <td>
@@ -165,13 +138,7 @@ if (isset($_POST['printall'])) {
                         ?>
                       </td>
                       <td>
-                        <?php if ($status == "tmp") {
-                          $toti = "Biaya sementara : ";
-                          $tot = $biayapenginapan;
-                        }
-                        if ($status == "yes") {
-                          $tot = $biayarawatinap;
-                        }
+                        <?php 
                         echo @$toti . " Rp. ";
                         @$sum += @$tot + $biayaperiksa + @$hargaobat;
                         echo number_format(@$tot + $biayaperiksa + @$hargaobat, 0, ".", ".");
