@@ -15,8 +15,6 @@
   $jumpasien = mysqli_num_rows($pasien);
   $antrian = mysqli_query($conn, "SELECT * FROM antrian");
   $jumlahantrian = mysqli_num_rows($antrian);
-  $rawat_inap = mysqli_query($conn, "SELECT * FROM ruang_inap WHERE id_pasien IS NOT NULL");
-  $jumrawatinap = mysqli_num_rows($rawat_inap);
   $dokter = mysqli_query($conn, "SELECT * FROM pegawai WHERE pekerjaan='1'");
   $jumlahdokter = mysqli_num_rows($dokter);
   ?>
@@ -46,7 +44,7 @@
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
-                <div class="card-icon bg-danger">
+                <div class="card-icon bg-warning">
                   <i class="fas fa-user-injured"></i>
                 </div>
                 <div class="card-wrap">
