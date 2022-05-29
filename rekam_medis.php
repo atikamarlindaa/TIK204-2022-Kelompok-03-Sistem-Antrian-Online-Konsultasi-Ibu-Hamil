@@ -80,27 +80,6 @@
 			</script>';
   }
 
-  if (isset($_POST['rawatinap'])) {
-    $idpasien = $_POST['id'];
-    $penyakit = $_POST['penyakit'];
-    $idruang = $_POST['ruang'];
-    $kodestatus = "tmp" . $idruang;
-    $ruang = mysqli_query($conn, "SELECT * FROM ruang_inap WHERE id='$idruang'");
-    $nama = mysqli_fetch_array($ruang);
-    $namaruang = $nama['nama_ruang'];
-    mysqli_query($conn, "UPDATE ruang_inap SET id_pasien='$idpasien', tgl_masuk='$tglnow', status='1' WHERE id='$idruang'");
-    mysqli_query($conn, "UPDATE riwayat_penyakit SET id_rawatinap='$kodestatus' WHERE id_pasien='$idpasien'");
-    echo '<script>
-				setTimeout(function() {
-					swal({
-						title: "Kamar dipesan!",
-						text: "Kamar ' . $namaruang . ' Berhasil Dipesan",
-						icon: "success"
-						});
-					}, 500);
-			</script>';
-  }
-
   if (isset($_POST['pesanobat'])) {
     $idpasien = $_POST['id'];
     $penyakit = $_POST['penyakit'];
@@ -349,46 +328,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="tab-pane fade" id="contact4" role="tabpanel" aria-labelledby="contact-tab4">
-                                    <div class="card-body">
-                                      <div class="form-group row mb-4">
-                                        <?php
-                                            $kepake = mysqli_query($conn, "SELECT * FROM ruang_inap WHERE id_pasien='$idpasien'");
-                                            $ruang = mysqli_query($conn, "SELECT * FROM ruang_inap WHERE status='0'");
-                                            $belumdipake = mysqli_num_rows($kepake);
-                                            if ($belumdipake != 1){ 
-                                          ?>
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pilih Ruangan</label>
-                                        <div class="col-sm-12 col-md-7">
-                                          <input type="hidden" class="form-control" name="id" required="" value="<?php echo $idpasien; ?>">
-                                          <input type="hidden" class="form-control" name="penyakit" required="" value="<?php echo $penyakit; ?>">
-                                          
-                                          <select class="form-control select2" name="ruang" style="width: 470px; height:100px">
-                                            <?php
-                                                while ($namaruang = mysqli_fetch_array($ruang)) {
-                                                  echo "<option value='" . $namaruang['id'] . "'>" . $namaruang['nama_ruang'] . "</option>";
-                                                }?>
-                                            </select>
-                                            <div class="invalid-feedback">
-                                              Mohon data diisi!
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                        <div class="col-md-6"></div>
-                                        <div class="col-lg-4 col-md-6 text-right">
-                                          <input type="submit" class="btn btn-icon icon-right btn-info" name="rawatinap" value="Pilih Ruang"> 
-                                          <input type="submit" class="btn btn-icon icon-right btn-success" name="print" value="Selesai">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <?php    
-                                            }else{
-                                              echo 'Pasien sudah memilih ruangan 
-                                              <input type="submit" class="btn btn-icon icon-right btn-success" name="print" value="Selesai">';
-                                            } ?>
-                                  </div>  
+                                  </div> 
                                 </div>
                               </div>
                             </div>
