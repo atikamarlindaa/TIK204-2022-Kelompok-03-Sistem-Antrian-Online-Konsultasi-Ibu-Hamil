@@ -40,6 +40,7 @@
               display: true,
               padding: 10,
               fontColor:"#6C7383"
+              
             },
             gridLines: {
               display: false,
@@ -64,6 +65,7 @@
               display: true,
               color:"#f2f2f2",
               drawBorder: false
+              
             }
           }]
         },
@@ -110,6 +112,7 @@
             borderWidth: 2,
             fill: false,
             label: "Downloads"
+            
           }
         ]
       };
