@@ -49,7 +49,7 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Data Pasien</h4>
+                    <h4>Antrian Pasien</h4>
                   </div>
                   <div class="card-body">
                     <?php echo $jumlahantrian; ?>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Dokter</h4>
+                    <h4>Dokter Available</h4>
                   </div>
                   <div class="card-body">
                     <?php echo $jumlahdokter; ?>
