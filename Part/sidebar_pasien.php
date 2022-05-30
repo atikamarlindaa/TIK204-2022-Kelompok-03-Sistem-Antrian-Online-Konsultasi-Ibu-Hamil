@@ -19,11 +19,7 @@ foreach ($pecahjudul as $w) {
     <ul class="sidebar-menu">
       <li <?php echo ($page == "Dashboard Pasien") ? "class=active" : ""; ?>><a class="nav-link" href="dashboard_pasien.php"><i class="fas fa-fire"></i><span>Dashboard</span></a></li>
       <li <?php echo ($page == "Jadwal Dokter") ? "class=active" : ""; ?>><a href="jadwaldokter_pasien.php" class="nav-link"><i class="fas fa-users"></i> <span>Jadwal Dokter</span></a></li>
-
-
        <li <?php echo ($page == "Ambil Antrian") ? "class=active" : ""; ?>><a class="nav-link" href="antrian_pasien.php"><i class="fas fa-stethoscope"></i> <span>Ambil Antrian</span></a></li>
-            
-      
        <li <?php echo ($page == "Data Foto Hasil USG" || @$page1 == "detrot") ? "class=active" : ""; ?>><a class="nav-link" href="usg_pasien.php"><i class="fas fa-skull"></i> <span>Foto Hasil USG</span></a></li>
       <li <?php echo ($page == "Data Diri" || @$page1 == "det") ? "class=active" : ""; ?>><a class="nav-link" href="profil_pasien.php"><i class="fas fa-user-injured"></i> <span>Data Diri</span></a></li>
   </aside>
